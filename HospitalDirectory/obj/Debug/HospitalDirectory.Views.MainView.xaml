@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="HospitalDirectory.MainView">
+	<StackLayout>
+		<Label Text = "HOSPITAL DIRECTORY" HorizontalTextAlignment = "Center" FontSize = "30"/>
+		<Entry Placeholder = "Enter Hospital Name" Text = "{Binding InputHName}"/>
+		<Entry Placeholder = "Enter Hospital Label"/>
+		<Button Text = "Add Entry" Command = "{Binding Update}"/>
+		<Label/>
+
+		<StackLayout VerticalOptions = "FillAndExpand">
+			<!-- Table Header -->
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height = "75"/>
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width = "*"/>
+					<ColumnDefinition Width = "*"/>
+				</Grid.ColumnDefinitions>
+				
+				<Label Grid.Row = "0" Grid.Column = "0" Text = "Hospital" Font = "20" HorizontalTextAlignment = "Center" TextColor = "Blue"/>
+				<Label Grid.Row = "0" Grid.Column = "1" Text = "Location" Font = "20" HorizontalTextAlignment = "Center" TextColor = "Blue"/>
+			</Grid>
+
+			<!-- Hospital Details -->
+			<ListView>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout>
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition Height = "75"/>
+									</Grid.RowDefinitions>
+
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width = "*"/>
+										<ColumnDefinition Width = "*"/>
+									</Grid.ColumnDefinitions>
+									
+									<Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding InputHName}" Font = "20" HorizontalTextAlignment = "Center"/>
+									<Label Grid.Row = "0" Grid.Column = "1" Text = "Hloc" Font = "20" HorizontalTextAlignment = "Center"/>
+								</Grid>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>	
+		</StackLayout>
+			
+	</StackLayout>
+</ContentPage>
