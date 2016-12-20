@@ -4,8 +4,9 @@
 			 x:Class="HospitalDirectory.MainView">
 	<StackLayout>
 		<Label Text = "HOSPITAL DIRECTORY" HorizontalTextAlignment = "Center" FontSize = "30"/>
-		<Entry Placeholder = "Enter Hospital Name" Text = "{Binding InputHName}"/>
-		<Entry Placeholder = "Enter Hospital Label" Text = "{Binding InputHLocation}"/>
+		<Entry Placeholder = "Enter Hospital Name" Text = "{Binding InputHName}"/> <!-- Same as in line 11 in /ViewModels/MainViewModel.cs -->
+		<Entry Placeholder = "Enter Hospital Location" Text = "{Binding InputHLocation}"/> <!-- Same as in line 27 in /ViewModels/MainViewModel.cs -->
+		
 		<Button Text = "Add Entry" Command = "{Binding AddHospital}"/>
 		<Label/>
 
@@ -27,6 +28,7 @@
 
 			<!-- Hospital Details -->
 			<ListView ItemsSource = "{Binding HospitalList}" SeparatorColor = "Black">
+				<!-- Same as in /ViewModels/MainViewModel.cs (lines 50 - 62) -->
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
@@ -43,6 +45,7 @@
 									
 									<Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding HName}" Font = "20" HorizontalTextAlignment = "Center"/>
 									<Label Grid.Row = "0" Grid.Column = "1" Text = "{Binding HLocation}" Font = "20" HorizontalTextAlignment = "Center"/>
+									<!-- Names in the Grid should be the same as in /Models/Hospital.cs (Lines 7 - 18) -->
 								</Grid>
 							</StackLayout>
 						</ViewCell>

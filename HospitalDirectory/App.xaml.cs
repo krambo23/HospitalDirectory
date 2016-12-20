@@ -6,9 +6,8 @@ namespace HospitalDirectory
 	{
 		public App()
 		{
-			InitializeComponent();
-
-			MainPage = new MainView();
+			InitializeComponent(); // Parses App.xaml
+			MainPage = new MainView(); // Launches MainView.xaml
 		}
 
 		protected override void OnStart()

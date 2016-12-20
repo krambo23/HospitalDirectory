@@ -8,7 +8,7 @@ namespace HospitalDirectory
 {
 	public class MainViewModel : INotifyPropertyChanged
 	{
-		// Input Hospital Name
+		// Input Hospital Name (Same as in Line 7 in /Views/MainView.xaml)
 		private string _inputHName;
 		public string InputHName
 		{ 
@@ -24,7 +24,7 @@ namespace HospitalDirectory
 			}
 		}
 
-		// Input Hospital Location
+		// Input Hospital Location (Same as in Line 8 in /Views/MainView.xaml)
 		private string _inputHLocation;
 		public string InputHLocation
 		{ 
@@ -45,7 +45,8 @@ namespace HospitalDirectory
 			HospitalList = new ObservableCollection<Hospital>();
 		}
 
-		// Hospital List - ObservableCollection
+		// Hospital List - ObservableCollection  
+		// Same as in Line 30 in /Views/MainView.xaml
 		private ObservableCollection<Hospital> _hospitalList;
 		public ObservableCollection<Hospital> HospitalList
 		{
@@ -72,7 +73,7 @@ namespace HospitalDirectory
 			HospitalList.Add(H);
 		}
 
-		// Bind with 'Add Entry' Button
+		// Bind with 'Add Entry' Button - /Views/MainView.xaml (Line 10)
 		public ICommand AddHospital
 		{
 			get

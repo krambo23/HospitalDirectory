@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{9FDF7CA5-D049-415C-A2E8-80EBA39F2715}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HospitalDirectory/Models/Hospital.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="HospitalDirectory/ViewModels/MainViewModel.cs" Line="88" Column="6" />
-      <File FileName="HospitalDirectory/Views/MainView.xaml.cs" Line="13" Column="41" />
-      <File FileName="HospitalDirectory/Models/Hospital.cs" Line="5" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
