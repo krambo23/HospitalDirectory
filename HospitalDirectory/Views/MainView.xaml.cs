@@ -7,12 +7,12 @@ namespace HospitalDirectory
 {
 	public partial class MainView : ContentPage
 	{
-		private MainViewModel _viewModel;
+		private MainViewModel _mainViewModel;
 		public MainView()
 		{
-			InitializeComponent();
-			_viewModel = new MainViewModel();
-			BindingContext = _viewModel;
+			InitializeComponent(); // Parses XAML
+			_mainViewModel = new MainViewModel();
+			BindingContext = _mainViewModel;
 		}
 	}
 }

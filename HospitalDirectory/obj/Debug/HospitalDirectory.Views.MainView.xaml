@@ -5,8 +5,8 @@
 	<StackLayout>
 		<Label Text = "HOSPITAL DIRECTORY" HorizontalTextAlignment = "Center" FontSize = "30"/>
 		<Entry Placeholder = "Enter Hospital Name" Text = "{Binding InputHName}"/>
-		<Entry Placeholder = "Enter Hospital Label"/>
-		<Button Text = "Add Entry" Command = "{Binding Update}"/>
+		<Entry Placeholder = "Enter Hospital Label" Text = "{Binding InputHLocation}"/>
+		<Button Text = "Add Entry" Command = "{Binding AddHospital}"/>
 		<Label/>
 
 		<StackLayout VerticalOptions = "FillAndExpand">
@@ -26,7 +26,7 @@
 			</Grid>
 
 			<!-- Hospital Details -->
-			<ListView>
+			<ListView ItemsSource = "{Binding HospitalList}" SeparatorColor = "Black">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
@@ -41,8 +41,8 @@
 										<ColumnDefinition Width = "*"/>
 									</Grid.ColumnDefinitions>
 									
-									<Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding InputHName}" Font = "20" HorizontalTextAlignment = "Center"/>
-									<Label Grid.Row = "0" Grid.Column = "1" Text = "Hloc" Font = "20" HorizontalTextAlignment = "Center"/>
+									<Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding HName}" Font = "20" HorizontalTextAlignment = "Center"/>
+									<Label Grid.Row = "0" Grid.Column = "1" Text = "{Binding HLocation}" Font = "20" HorizontalTextAlignment = "Center"/>
 								</Grid>
 							</StackLayout>
 						</ViewCell>

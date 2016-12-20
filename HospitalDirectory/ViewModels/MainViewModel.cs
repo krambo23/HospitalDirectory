@@ -39,11 +39,17 @@ namespace HospitalDirectory
 			}
 		}
 
-		// Hospital List
+		// Instantiate
+		public MainViewModel()
+		{
+			HospitalList = new ObservableCollection<Hospital>();
+		}
+
+		// Hospital List - ObservableCollection
 		private ObservableCollection<Hospital> _hospitalList;
 		public ObservableCollection<Hospital> HospitalList
 		{
-			get 
+			get
 			{
 				return _hospitalList;
 			}
@@ -52,12 +58,6 @@ namespace HospitalDirectory
 			{
 				_hospitalList = value;
 			}
-		}
-
-		// Instantiate
-		public MainViewModel()
-		{
-			HospitalList = new ObservableCollection<Hospital>();
 		}
 
 		// Adds to Hospital List
@@ -83,12 +83,15 @@ namespace HospitalDirectory
 
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public void OnPropertyChanged(string PropertyInput)
+		private void OnPropertyChanged(string PropertyInput)
 		{
+			/*
 			if (PropertyInput != null)
 			{
 				PropertyChanged(this, new PropertyChangedEventArgs(PropertyInput));
 			}
+			*/
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyInput));
 		}
 	}
 }
