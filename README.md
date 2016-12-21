@@ -3,4 +3,4 @@ HospitalDirectory
 <br>
 MSP Training on Xamarin.Forms
 <br>
-2016-12-20
+From 2016-12-20 to 2016-12-21
