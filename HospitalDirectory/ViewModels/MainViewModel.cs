@@ -43,6 +43,7 @@ namespace HospitalDirectory
 		public MainViewModel()
 		{
 			HospitalList = new ObservableCollection<Hospital>();
+			populateList();
 		}
 
 		// Hospital List - ObservableCollection  
@@ -62,15 +63,17 @@ namespace HospitalDirectory
 		}
 
 		// Adds to Hospital List
-		public void Run()
+		public async void Run()
 		{
 			Hospital H = new Hospital
 			{
-				HName = InputHName,
-				HLocation = InputHLocation
+				Name = InputHName,
+				Location = InputHLocation
 			};
-
-			HospitalList.Add(H);
+			await App.client.GetTable<Hospital>().InsertAsync(H);
+			HospitalList.Clear();
+			populateList();
+			//HospitalList.Add(H);
 		}
 
 		// Bind with 'Add Entry' Button - /Views/MainView.xaml (Line 10)
@@ -78,7 +81,22 @@ namespace HospitalDirectory
 		{
 			get
 			{
-				return new Command(Run);
+				return new Command (Run);
+			}
+		}
+
+		public async void populateList()
+		{
+			var dblist = await App.client.GetTable<Hospital>().ToListAsync();
+
+			foreach (var item in dblist)
+			{
+				Hospital newhospital = new Hospital
+				{
+					Location = item.Location,
+					Name = item.Name
+				};
+				HospitalList.Add(newhospital);
 			}
 		}
 
@@ -91,7 +109,7 @@ namespace HospitalDirectory
 			{
 				PropertyChanged(this, new PropertyChangedEventArgs(PropertyInput));
 			}
-			*/
+			*/ // Same as code below
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyInput));
 		}
 	}

@@ -1,11 +1,16 @@
-﻿using Xamarin.Forms;
+﻿using HospitalDirectory;
+using Microsoft.WindowsAzure.MobileServices;
+using Xamarin.Forms;
 
 namespace HospitalDirectory
 {
 	public partial class App : Application
 	{
+
+		public static MobileServiceClient client;
 		public App()
 		{
+			client = new MobileServiceClient(Settings.ApplicationUrl);
 			InitializeComponent(); // Parses App.xaml
 			MainPage = new MainView(); // Launches MainView.xaml
 		}

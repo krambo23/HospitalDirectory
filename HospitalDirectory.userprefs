@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{9FDF7CA5-D049-415C-A2E8-80EBA39F2715}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
     <Files>
-      <File FileName="HospitalDirectory/ViewModels/MainViewModel.cs" Line="88" Column="6" />
+      <File FileName="HospitalDirectory/Settings.cs" Line="6" Column="9" />
+      <File FileName="HospitalDirectory/App.xaml.cs" Line="27" Column="3" />
+      <File FileName="HospitalDirectory/Models/Hospital.cs" Line="11" Column="8" />
+      <File FileName="HospitalDirectory/ViewModels/MainViewModel.cs" Line="92" Column="31" />
+      <File FileName="Droid/MainActivity.cs" Line="25" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

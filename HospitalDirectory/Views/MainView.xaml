@@ -14,7 +14,7 @@
 			<!-- Table Header -->
 			<Grid>
 				<Grid.RowDefinitions>
-					<RowDefinition Height = "75"/>
+					<RowDefinition Height = "50"/>
 				</Grid.RowDefinitions>
 
 				<Grid.ColumnDefinitions>
@@ -43,8 +43,8 @@
 										<ColumnDefinition Width = "*"/>
 									</Grid.ColumnDefinitions>
 									
-									<Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding HName}" Font = "20" HorizontalTextAlignment = "Center"/>
-									<Label Grid.Row = "0" Grid.Column = "1" Text = "{Binding HLocation}" Font = "20" HorizontalTextAlignment = "Center"/>
+									<Label Grid.Row = "0" Grid.Column = "0" Text = "{Binding Name}" Font = "20" HorizontalTextAlignment = "Center"/>
+									<Label Grid.Row = "0" Grid.Column = "1" Text = "{Binding Location}" Font = "20" HorizontalTextAlignment = "Center"/>
 									<!-- Names in the Grid should be the same as in /Models/Hospital.cs (Lines 7 - 18) -->
 								</Grid>
 							</StackLayout>
